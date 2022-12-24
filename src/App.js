@@ -38,21 +38,50 @@ const HeadingComponent=()=>(
 );
 
 
+const CardContainer=()=>
+{
+    //Using JSX
+    // let cardJSX=[];
+    // for(let i=0; i<data.length; i++) {
+    //     cardJSX.push(<CardComponent restraunt={data[i]}/>);
+    // }
+    // return cardJSX;
+
+    //Using Map Type 1
+    const card=data.map((resturant)=>{
+        return <CardComponent restraunt={resturant}/>
+    })
+
+    //Using Map Type 2
+    // const card=data.map((resturant,i)=>{
+    //     return <CardComponent restraunt={data[i]}/>
+    // })
+
+    return card;
+};
+
 
 const BodyComponent=()=>(
     <div className="card-container">
-        <CardComponent restraunt={data[0]}/>
-        <CardComponent restraunt={data[1]}/>
-        <CardComponent restraunt={data[2]}/>
-        <CardComponent restraunt={data[3]}/>
-        {/* //Type 4 from CardComponent 
-        <CardComponent {...data[0]}/>
-        <CardComponent {...data[1]}/>
-        <CardComponent {...data[2]}/>
-        <CardComponent {...data[3]}/> */}
+        <CardContainer></CardContainer>
     </div>
 );
 
+//Before Card Container
+// const BodyComponent=()=>(
+//     <div className="card-container">
+//         {/*Type 1 2 3*/}
+//         <CardComponent restraunt={data[0]}/>
+//         <CardComponent restraunt={data[1]}/>
+//         <CardComponent restraunt={data[2]}/>
+//         <CardComponent restraunt={data[3]}/> 
+//         {/* //Type 4 from CardComponent 
+//         <CardComponent {...data[0]}/>
+//         <CardComponent {...data[1]}/>
+//         <CardComponent {...data[2]}/>
+//         <CardComponent {...data[3]}/> */}
+//     </div>
+// );
 
 
 

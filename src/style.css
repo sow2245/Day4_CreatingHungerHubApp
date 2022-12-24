@@ -1,0 +1,15 @@
+#title{
+    font-size: 2em;
+}
+
+#card
+{
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+#card >img{width: 100%;}
+
+.card-container{display: flex;}
