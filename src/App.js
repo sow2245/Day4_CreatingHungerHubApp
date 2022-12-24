@@ -55,15 +55,24 @@ const CardContainer=()=>
     const card=data.map((resturant)=>{
         return <CardComponent restraunt={resturant} key={resturant.id}/>
     })
-
-    //Using Map Type 2
-    // const card=data.map((resturant,i)=>{
-    //     return <CardComponent restraunt={data[i]}/>
-    // })
-
     return card;
+
+    //Using Map Type 2 and also other way of writing key
+    // const card=data.map((resturant,i)=>{
+    //     return <CardComponent restraunt={data[i]} key={i}/>
+    // })
+    //return card; 
+    
+    //Using Map Type 3
+    // const card=data.map((resturant)=> <CardComponent restraunt={resturant} key={resturant.id}/>);
+    // return card;
+
+    //Using Map Type 4
+    //return data.map((resturant)=> <CardComponent restraunt={resturant} key={resturant.id}/>);
 };
 
+ //Using Map Type 5
+ //const CardContainer=()=>data.map((resturant)=> <CardComponent restraunt={resturant} key={resturant.id}/>);
 
 const BodyComponent=()=>(
     <div className="card-container">
